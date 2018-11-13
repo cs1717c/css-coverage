@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+tmp/
+
+# generate output
+html/
+cypress/integration/
+unused-report

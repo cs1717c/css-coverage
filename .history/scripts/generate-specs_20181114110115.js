@@ -6,12 +6,14 @@ const baseUrl = "https://www-dev.uat-thesun.co.uk/";
 
 const urls = [
     // ------ All test articles go here ------ //
+     "about/",
+     "info/debug",
      "news/139707/tracking-example/",
      "living/93014/static-article-for-visual-regression-automation-with-ads-do-not-amend/amp",
      "fabulous/6550741/pride-of-britain-awards-fashion-hits-misses-susanna-reid/",
      "fabulous/113565/celeb-death-hoax-timeline/",
      "news/6542692/boxout-visual-regression-test-do-not-amend-use-for-visual-regression/",
-     "sport/57306/article-with-curated-rail/",
+    "sport/57306/article-with-curated-rail/",
      "fabulous/108330/article-for-slyce-testing-not-in-fashion/",
      "news/6532912/article-en-francais-featured-video/?testmode=qavideo",
      "tvandshowbiz/53295/brightcove-featured-video/?testmode=qavideo",
@@ -22,10 +24,10 @@ const urls = [
      "tvandshowbiz/bizarre/53881/zoninator-1-with-app-vertical-1-section-and-no-landscape/",
      "fabulous/153309/thomas-the-aye-spy-tool/",
      "fabulous/45213/apple-news-featured-video-arun/",
-     "dear-deidre/61393/test-dear-deidre/",
+    "dear-deidre/61393/test-dear-deidre/",
      "news-gossip/184828/headline-2/",
      "champions-league/187213/static-article-for-automation-without-any-ads-do-not-amend/",
-     "sport/football/109289/englands-world-cup-2018-kit-will-reportedly-be-the-most-expensive-in-history-at-staggering-110/",
+    "sport/football/109289/englands-world-cup-2018-kit-will-reportedly-be-the-most-expensive-in-history-at-staggering-110/",
      "money/70650/test-images/",
      "money-2/35946/test-images/",
      "sport/6546259/test-hero-image-in-liveblog/",
@@ -51,7 +53,7 @@ const urls = [
      "tvandshowbiz/bizarre/45588/hero-image-liveblog/",
      "money/118558/load-more-example/",
      "news/131419/inside-the-deadly-turf-war-between-travellers-and-locals-behind-hither-green-burglar-death-new/",
-     "news/80745/good-morning-britain-fans-furious-as-part-time-piers-morgan-again-replaced-by-richard-madeley-and-susanna-reid/",
+    "news/80745/good-morning-britain-fans-furious-as-part-time-piers-morgan-again-replaced-by-richard-madeley-and-susanna-reid/",
      "living/52955/test-bright-cove-new/",
      "living/52973/test-boxout-article-2/",
      "sport/football/68282/devs-opta-match-summary-test-comparison/",
@@ -82,6 +84,12 @@ const urls = [
      "football/bundesliga/374372/toms-amazing-test/",
      "index/",
      "football/374182/talky-mcsportyface-test-article/",
+     "?testmode=lite",
+     "?adunit=/25436805/red&testmode=red250y50",
+     "?adunit=/25436805/testmode&testmode=testmodeworks",
+     "sport/football/6532119/ttt-chelsea/",
+     "?testtttt=123",
+     "arhejwre",
     
     // ------ Page Sections  URL ------ //
      "football/",
@@ -103,6 +111,23 @@ const urls = [
      "sport/football", 
      "living/47/*",
      "/sport/",
+
+    // ------ Wordpress Stuff go here ------ //
+     "wp-login.php",
+     "wp-json/wp/v2/posts/",
+     "wp-json/thesun/v1/",
+     "wp-json/thescottishsun/v1/",
+     "wp-json/theirishsun/v1/",
+     "/wp-json/dreamteam/v1/",
+     "/wp-json/talksport/v1/",
+     "wp-admin/post.php?",
+
+    // --- liveblog --- //
+     "wp-admin/edit.php?page=sunliveblogs&post=",
+     "wp-json/thesun/v1/liveblog/100?from=0000000000",
+     " https://www.thesun.co.uk/wp-content/uploads/2017/11/dd-composite-chiefs-ear.jpg?strip=all&w=689%E2%80%B3",
+     " https://twitter.com/Marie68920368/status/1049649347770634240"
+
 ];
 
 const template = createTemplate(`
@@ -114,10 +139,10 @@ captureHtml(url);
 `);
 
 urls.forEach(shortUrl => {
-  const url = baseUrl + shortUrl;
+  const url = shortUrl + baseUrl;
 
 
-  const slug = slugify(shortUrl);
+  const slug = slugify(url);
   console.log("Generating url "+url);
 
 

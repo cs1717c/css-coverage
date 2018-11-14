@@ -51,7 +51,7 @@ const urls = [
      "tvandshowbiz/bizarre/45588/hero-image-liveblog/",
      "money/118558/load-more-example/",
      "news/131419/inside-the-deadly-turf-war-between-travellers-and-locals-behind-hither-green-burglar-death-new/",
-     "news/80745/good-morning-britain-fans-furious-as-part-time-piers-morgan-again-replaced-by-richard-madeley-and-susanna-reid/",
+    "news/80745/good-morning-britain-fans-furious-as-part-time-piers-morgan-again-replaced-by-richard-madeley-and-susanna-reid/",
      "living/52955/test-bright-cove-new/",
      "living/52973/test-boxout-article-2/",
      "sport/football/68282/devs-opta-match-summary-test-comparison/",
